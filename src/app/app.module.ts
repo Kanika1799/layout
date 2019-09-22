@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router'; // we also need angular router f
 import { NbSidebarModule, NbLayoutHeaderComponent,NbLayoutFooterComponent,NbLayoutColumnComponent,NbLayoutModule,NbListModule,NbListComponent,NbListItemComponent,NbCardComponent,NbCardModule,NbCardHeaderComponent,NbMenuModule,NbButtonModule } from '@nebular/theme';
 import { MenuShowcaseComponent } from './menu-showcase/menu-showcase.component';
 import { CardAccentsComponent } from './card-accents/card-accents.component';
-
+import { NbIconModule, NbToggleModule, NbActionsModule } from '@nebular/theme';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +18,7 @@ import { CardAccentsComponent } from './card-accents/card-accents.component';
     CardAccentsComponent
      ],
   imports: [
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -30,6 +31,10 @@ import { CardAccentsComponent } from './card-accents/card-accents.component';
     NbCardModule,
     NbMenuModule.forRoot(),
     RouterModule, // RouterModule.forRoot(routes, { useHash: true }), if this is your app.modul
+    NbButtonModule,
+    NbIconModule,
+    NbToggleModule,
+    NbActionsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -50,4 +55,3 @@ import { CardAccentsComponent } from './card-accents/card-accents.component';
   ]
 })
 export class AppModule { }
-

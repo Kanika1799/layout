@@ -1,6 +1,16 @@
 <nb-layout center>
-  <nb-layout-header>DASHBOARD</nb-layout-header>
-<nb-sidebar>
+  <nb-layout-header>
+    <nb-actions>
+            <nb-action>DASHBOARD</nb-action>
+    </nb-actions>
+    <input id="typeahead-basic" type="text" class="form-control"/>
+    <nb-actions>
+      <nb-action icon="home-outline"></nb-action>
+      <nb-action icon="search-outline"></nb-action>
+      <nb-action icon="edit-outline"></nb-action>
+    </nb-actions>
+  </nb-layout-header>
+<nb-sidebar >
   <router-outlet></router-outlet>
   <nb-menu-showcase></nb-menu-showcase>
 </nb-sidebar>
